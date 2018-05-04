@@ -12,39 +12,61 @@ public abstract class MediaSkeleton
    protected String oAuth;
    protected String message;
    
+   /**
+   * CONSTRUCTOR - base constructor assigning message to a default statement.
+   */
    public MediaSkeleton()
    {
-      oAuth = "You have no oAuth";
-      message = "You suck"; 
+      message = "You have no message";
    }
    
-   public MediaSkeleton(String oAuth, String message)
+   /*
+   * CONSTRUCTOR - assisgns message to the string value in the parameter
+   */
+   public MediaSkeleton(String message)
    {
-      this.oAuth = oAuth;
       this.message = message;
    }
    
+   /*
+   * METHOD - sets oauth to the given string value
+   */
    public void setOAuth(String oAuth)
    {
       this.oAuth = oAuth;
    }
    
+   /*
+   * METHOD - returns oauth
+   */
    public String getOAuth()
    {
       return oAuth;
    }
    
+   /*
+   * METHOD - sets message to the given string value
+   */
    public void setMessage(String message)
    {
       this.message = message;
    }
-   
+	
+   /*
+   * METHOD - returns the message
+   */
    public String getMessage()
    {
       return message;
    }
    
-	public abstract void post();
-	
-	public abstract void connect();
+   /*
+   * ABSTRACT METHOD - posts the message on a social media platform
+   */
+   public abstract void post();
+
+   /*
+   * ABSTRACT METHOD - logs the user into the given social media platform
+   */
+   public abstract void connect();
 }
