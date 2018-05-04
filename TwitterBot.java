@@ -78,6 +78,7 @@ public class TwitterBot extends MediaSkeleton {
 
     /**
     * METHOD - displays the user's feed on the device.
+    * Built from example code from the Twitter4j website
     */
     public void displayFeed() {
         Twitter twitter = TwitterFactory.getSingleton();
