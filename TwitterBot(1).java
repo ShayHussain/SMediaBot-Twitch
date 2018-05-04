@@ -50,7 +50,10 @@ public class TwitterBot {
       return message;
    }
 
-    
+    /**
+    * METHOD - logs the user into their twitter account through OAuth. 
+    * Built from example code from the Twitter4j website
+    */
     public void connect(){
         Twitter twitter = TwitterFactory.getSingleton();
         twitter.setOAuthConsumer("bob_burgah", "abc123abc");
