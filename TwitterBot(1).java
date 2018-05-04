@@ -1,4 +1,8 @@
-
+/**
+* author: Maxim Tsoy
+* tester: Haram Kim
+* This was code we used in jgrasp to try and get the Twitter bot code to work, but we ran into log in errors.
+*/
 import java.io.BufferedReader;
 import java.io.IOException;
 import twitter4j.*;
@@ -14,25 +18,39 @@ public class TwitterBot {
 
     private String message;
    
+    /**
+    * CONSTRUCTOR - defualt constructor that assings a default string to message.
+    */
    public TwitterBot()
    {
       message = "You have no message."; 
    }
+    
+   /**
+   * CONSTRUTOR - creates the twitterbot object and assings the parameter message to the class message
+   */
    public TwitterBot(String message)
    {
       this.message = message;
    }
    
+    /**
+    * METHOD - assigns the message string to the string in the parameter.
+    */
    public void setMessage(String message)
    {
       this.message = message;
    }
    
+   /**
+   * METHODS -  returns message.
+   */
    public String getMessage()
    {
       return message;
    }
 
+    
     public void connect(){
         Twitter twitter = TwitterFactory.getSingleton();
         twitter.setOAuthConsumer("bob_burgah", "abc123abc");
