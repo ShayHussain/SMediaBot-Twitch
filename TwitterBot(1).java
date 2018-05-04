@@ -98,7 +98,10 @@ public class TwitterBot {
     }
 
 
-
+    /**
+    *  METHOD - posts the message onto the user's twitter account.
+    * Built from example code found on the Twitter4j website
+    */
     public void post()
     {
         Twitter twitter = TwitterFactory.getSingleton();
@@ -118,7 +121,10 @@ public class TwitterBot {
 
     }
 
-
+    /**
+    * METHOD - displays the feed from the user's twitter account
+    * Built using example code from the Twitter4j website
+    */ 
     public void displayFeed() {
         Twitter twitter = TwitterFactory.getSingleton();
         try
