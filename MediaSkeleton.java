@@ -4,6 +4,7 @@
 
 /**
  * @author Maxim Tsoy
+ * @tester Haram Kim
  *
  */
 
