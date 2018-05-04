@@ -1,3 +1,8 @@
+/**
+* author: Maxim Tsoy
+* tester: Haram Kim
+*/
+
 package com.example.selen.stevebot;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,11 +16,17 @@ import java.util.List;
 
 public class TwitterBot extends MediaSkeleton {
 
-
+    /**
+    *  CONSTRUCTOR - assigns message to the message string in the MediaSkeleton class
+    */
     public TwitterBot(String message){
         super(message);
     }
-
+    
+    /**
+    * METHOD - logs the user into their twitter account through OAuth. 
+    * Built from example code from the Twitter4j website
+    */
     public void connect(){
         Twitter twitter = TwitterFactory.getSingleton();
         twitter.setOAuthConsumer("[consumer key]", "[consumer secret]");
@@ -42,12 +53,11 @@ public class TwitterBot extends MediaSkeleton {
             }
         }
     }
-    private static void storeAccessToken(int useId, AccessToken accessToken){
-        //store accessToken.getToken()
-        //store accessToken.getTokenSecret()
-    }
 
-
+    /**
+    *  METHOD - posts the message onto the user's twitter account.
+    * Built from example code found on the Twitter4j website
+    */
     public void post(){
         Twitter twitter = TwitterFactory.getSingleton();
         StatusUpdate jimmy = new StatusUpdate(message);
@@ -66,7 +76,9 @@ public class TwitterBot extends MediaSkeleton {
 
     }
 
-
+    /**
+    * METHOD - displays the user's feed on the device.
+    */
     public void displayFeed() {
         Twitter twitter = TwitterFactory.getSingleton();
         List<Status> statuses = twitter.getHomeTimeline();
